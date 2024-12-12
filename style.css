@@ -1,0 +1,94 @@
+body{
+    font-size: 14pt;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    
+}
+main{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "n n"
+    "ar as"
+    "f f";
+    max-width: 1500px;
+    
+}
+
+header{
+    grid-area: h;
+    background-color: tomato;
+    padding: 20px;
+    text-align: center;
+}
+nav{
+    grid-area: n;
+    background-color: deepskyblue;
+    text-align: center;
+    padding: 20px;
+
+}
+nav>ul{
+    text-decoration: none;
+}
+nav>ul>li{
+    list-style: none;
+    padding: 2vw;
+    display: inline;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+
+}
+nav>ul>li>a:hover{
+    text-decoration: none;
+    background-color: crimson;
+    color: black;
+}
+div{
+    grid-area: ar;
+    background-color: gold;
+    text-align: left;
+    padding: 20px;
+
+}
+aside{
+    grid-area: as;
+    background-color: lightgreen;
+    padding: 20px;
+
+}
+aside>img{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  50%;
+}
+
+footer{
+    grid-area: f;
+    background-color: hotpink;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media screen and (max-width:800px) {
+    main{
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-areas: 
+        "h "
+        "ar"
+        "as"
+        "f";
+        max-width: 1500px;
+        
+    }
+    
+}
